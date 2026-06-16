@@ -1,23 +1,24 @@
 [gd_scene format=3 uid="uid://bhhy2mcqk0aq5"]
 
 [ext_resource type="Script" uid="uid://ikyoxg4yi6a6" path="res://player.gd" id="1_xhfnw"]
+[ext_resource type="Texture2D" uid="uid://ialx5248mnu1" path="res://image/太空人-fotor-bg-remover-2026061619743.png" id="2_kpjcp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rwas"]
-size = Vector2(50, 50)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kne1u"]
+size = Vector2(322.0014, 380.00256)
 
 [node name="Player" type="CharacterBody2D" unique_id=1135200309]
 scale = Vector2(0.38819706, 0.40526044)
 script = ExtResource("1_xhfnw")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=622224640]
-offset_left = -21.0
-offset_top = -20.0
-offset_right = 29.0
-offset_bottom = 30.0
-scale = Vector2(11.136716, 4.7051635)
-color = Color(0.921705, 0.58616537, 0.46218282, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=793759697]
+position = Vector2(-9.016039, 27.14303)
+scale = Vector2(1.2434609, 0.89051837)
+shape = SubResource("RectangleShape2D_kne1u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1541694788]
-shape = SubResource("RectangleShape2D_0rwas")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=280778354]
+position = Vector2(2.5760114, 37.013237)
+scale = Vector2(5.2838326, 2.1766214)
+texture = ExtResource("2_kpjcp")
+flip_v = true
 
-[node name="Camera2D" type="Camera2D" parent="CollisionShape2D" unique_id=1391307438]
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=1391307438]
