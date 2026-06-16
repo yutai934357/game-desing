@@ -16,7 +16,9 @@ var meteor_interval = 5.0
 
 func _ready():
 	player_node = get_node("Player")
-	last_cloud_y = player_node.position.y - 100
+	# 從玩家位置稍微上方開始生成雲
+	last_cloud_y = player_node.position.y - 50
+	# 遊戲開始時先生成10朵雲
 	for i in range(10):
 		spawn_cloud()
 	$PauseMenu.visible = false
