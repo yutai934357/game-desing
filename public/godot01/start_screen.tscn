@@ -5,13 +5,19 @@
 [ext_resource type="Texture2D" uid="uid://b00fq11hwjlew" path="res://image/離開遊戲.png" id="3_vdywr"]
 [ext_resource type="Script" uid="uid://lffs25el3j6i" path="res://start_screen.gd" id="4_k1na2"]
 
-[node name="StartScreen" type="Node2D" unique_id=2098515156]
-position = Vector2(865, 520.00006)
+[node name="StartScreen" type="Control" unique_id=1732270241]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 865.0
+offset_top = 520.00006
+offset_right = 865.0
+offset_bottom = 520.00006
 scale = Vector2(0.608156, 0.66333485)
 script = ExtResource("4_k1na2")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1046872707]
 custom_minimum_size = Vector2(1152, 648)
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,6 +32,7 @@ texture = ExtResource("1_afy8x")
 metadata/_edit_use_anchors_ = true
 
 [node name="QuitButton" type="TextureButton" parent="." unique_id=1507258480]
+layout_mode = 0
 offset_left = -309.13116
 offset_top = -177.88913
 offset_right = 367.86896
@@ -35,6 +42,7 @@ texture_normal = ExtResource("3_vdywr")
 metadata/_edit_use_anchors_ = true
 
 [node name="StartButton" type="TextureButton" parent="." unique_id=1897396820]
+layout_mode = 0
 offset_left = -1164.1748
 offset_top = -183.91928
 offset_right = -487.1748
