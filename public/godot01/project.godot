@@ -15,9 +15,14 @@ run/main_scene="uid://cjlf7avf10ld8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SimpleGodotAIAssistant/plugin.cfg")
+enabled=PackedStringArray()
 
 [physics]
 
