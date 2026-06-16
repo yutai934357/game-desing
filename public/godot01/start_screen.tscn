@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://lffs25el3j6i" path="res://start_screen.gd" id="4_k1na2"]
 
 [node name="StartScreen" type="Node2D" unique_id=2098515156]
-position = Vector2(0, 4)
+position = Vector2(585, 327)
 scale = Vector2(0.40954968, 0.43202153)
 script = ExtResource("4_k1na2")
 
