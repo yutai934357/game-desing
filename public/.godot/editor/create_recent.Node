@@ -1,0 +1,14 @@
+CollisionShape2D
+Sprite2D
+StaticBody2D
+TextureButton
+TextureRect
+CanvasLayer
+Label
+RigidBody2D
+Node2D
+AudioStreamPlayer
+ColorRect
+Camera2D
+CharacterBody2D
+Area2D
