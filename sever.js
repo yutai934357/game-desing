@@ -10,7 +10,7 @@ var bodyParser = require("body-parser");
 
 
 
-server.use(express.static(__dirname + "/public"));
+server.use(express.static(__dirname + "/web"));
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
 
