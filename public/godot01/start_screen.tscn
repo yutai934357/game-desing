@@ -15,25 +15,30 @@ custom_minimum_size = Vector2(1152, 648)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1420.688
+offset_top = -782.41034
+offset_right = 1395.312
+offset_bottom = 753.58966
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.69189674, 0.6660045)
 texture = ExtResource("1_afy8x")
 metadata/_edit_use_anchors_ = true
 
 [node name="QuitButton" type="TextureButton" parent="." unique_id=1507258480]
-offset_left = 63.500366
-offset_top = -157.39954
-offset_right = 740.5005
-offset_bottom = 211.60046
-scale = Vector2(1.3483613, 1.3712744)
+offset_left = -309.13116
+offset_top = -177.88913
+offset_right = 367.86896
+offset_bottom = 191.11087
+scale = Vector2(0.9329268, 0.9132749)
 texture_normal = ExtResource("3_vdywr")
 metadata/_edit_use_anchors_ = true
 
 [node name="StartButton" type="TextureButton" parent="." unique_id=1897396820]
-offset_left = -937.61523
-offset_top = -152.13031
-offset_right = -260.61523
-offset_bottom = 216.86969
-scale = Vector2(1.2331312, 1.316112)
+offset_left = -1164.1748
+offset_top = -183.91928
+offset_right = -487.1748
+offset_bottom = 185.08072
+scale = Vector2(0.8531995, 0.87653625)
 texture_normal = ExtResource("2_k1na2")
 metadata/_edit_use_anchors_ = true
