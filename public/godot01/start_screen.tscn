@@ -6,8 +6,8 @@
 [ext_resource type="Script" uid="uid://lffs25el3j6i" path="res://start_screen.gd" id="4_k1na2"]
 
 [node name="StartScreen" type="Node2D" unique_id=2098515156]
-position = Vector2(882, 527)
-scale = Vector2(0.6281888, 0.717764)
+position = Vector2(865, 520.00006)
+scale = Vector2(0.608156, 0.66333485)
 script = ExtResource("4_k1na2")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1046872707]
