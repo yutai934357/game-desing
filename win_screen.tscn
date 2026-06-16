@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://nktosl3h03hr"]
+
+[ext_resource type="Script" path="res://win_screen.gd" id="1_1txte"]
+[ext_resource type="Texture2D" uid="uid://b1o53f1p7ilwe" path="res://image/遊戲通關.jpg" id="1_l2arl"]
+[ext_resource type="Texture2D" uid="uid://dd7wca2mcb37p" path="res://image/繼續遊戲.png" id="3_26557"]
+[ext_resource type="Texture2D" uid="uid://b00fq11hwjlew" path="res://image/離開遊戲.png" id="4_luvg0"]
+
+[node name="WinScreen" type="Node2D" unique_id=1731951156]
+script = ExtResource("1_1txte")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=585992174]
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_l2arl")
+
+[node name="PlayAgainButton" type="TextureButton" parent="." unique_id=2115447841]
+offset_left = 323.0
+offset_top = 519.0
+offset_right = 1168.0
+offset_bottom = 980.0
+scale = Vector2(0.37481824, 0.35355732)
+texture_normal = ExtResource("3_26557")
+
+[node name="MainMenuButton" type="TextureButton" parent="." unique_id=1182848625]
+offset_left = 522.0
+offset_top = 519.00006
+offset_right = 1199.0
+offset_bottom = 888.00006
+scale = Vector2(0.43797848, 0.43927595)
+texture_normal = ExtResource("4_luvg0")

@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://b212xfb7kbfho"]
+
+[ext_resource type="PackedScene" uid="uid://cwms8m6qgyl4o" path="res://Player.tscn" id="1_eqhe0"]
+[ext_resource type="Script" path="res://game_scene.gd" id="1_haeiw"]
+[ext_resource type="Texture2D" uid="uid://cmoryb32i66c7" path="res://image/下載.webp" id="2_b5kf5"]
+[ext_resource type="PackedScene" path="res://cloud.tscn" id="2_k77ap"]
+[ext_resource type="Texture2D" uid="uid://b7sls560yn5o" path="res://image/設定介面.png" id="5_5cvvu"]
+[ext_resource type="Texture2D" uid="uid://dvprdnxoyl63e" path="res://image/回主頁面按鈕.png" id="6_ed8b8"]
+[ext_resource type="Texture2D" uid="uid://b00fq11hwjlew" path="res://image/離開遊戲.png" id="7_l6ya2"]
+[ext_resource type="Texture2D" uid="uid://dd7wca2mcb37p" path="res://image/繼續遊戲.png" id="8_oieil"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k77ap"]
+size = Vector2(1152, 32)
+
+[node name="GameScene" type="Node2D" unique_id=87089587]
+script = ExtResource("1_haeiw")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=430408776]
+position = Vector2(3319, -4210)
+scale = Vector2(41.460716, 41.715263)
+texture = ExtResource("2_b5kf5")
+
+[node name="Player" parent="." unique_id=1135200309 instance=ExtResource("1_eqhe0")]
+position = Vector2(572.0366, 153)
+scale = Vector2(0.06558842, -0.29810283)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1480590695]
+position = Vector2(576, 580)
+scale = Vector2(5.235172, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=360056080]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_k77ap")
+debug_color = Color(0.13333334, 0.5647059, 0.84313726, 0.6509804)
+
+[node name="ColorRect" type="ColorRect" parent="Ground" unique_id=1866258564]
+offset_left = -580.21387
+offset_top = -34.0
+offset_right = 571.78613
+offset_bottom = -2.0
+
+[node name="Cloud" parent="." unique_id=324262069 instance=ExtResource("2_k77ap")]
+position = Vector2(315, 177)
+scale = Vector2(0.64052063, 0.79504454)
+
+[node name="Cloud" parent="Cloud" unique_id=419467055 instance=ExtResource("2_k77ap")]
+position = Vector2(223.25587, -133.3258)
+
+[node name="Cloud2" parent="Cloud" unique_id=87132257 instance=ExtResource("2_k77ap")]
+position = Vector2(-81.18395, -233.94914)
+scale = Vector2(1.0586792, 0.91019464)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1842868394]
+
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=833796595]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(2.270847, 2.323263)
+text = "score: 0"
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=329765606]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="PauseMenu" unique_id=2014916309]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.3971843, 0.38687024)
+texture = ExtResource("5_5cvvu")
+
+[node name="MainMenuButton" type="TextureButton" parent="PauseMenu/TextureRect" unique_id=2070877451]
+layout_mode = 0
+offset_left = 1110.3159
+offset_top = 643.62665
+offset_right = 1786.3159
+offset_bottom = 1012.62665
+scale = Vector2(0.8859867, 0.9526545)
+texture_normal = ExtResource("6_ed8b8")
+
+[node name="QuitButton" type="TextureButton" parent="PauseMenu/TextureRect" unique_id=42772125]
+layout_mode = 0
+offset_left = 1676.8033
+offset_top = 669.4751
+offset_right = 2353.8037
+offset_bottom = 1038.4753
+scale = Vector2(0.82198226, 0.8329872)
+texture_normal = ExtResource("7_l6ya2")
+
+[node name="ResumeButton" type="TextureButton" parent="PauseMenu/TextureRect" unique_id=33865618]
+layout_mode = 0
+offset_left = 521.16864
+offset_top = 635.8722
+offset_right = 1366.1687
+offset_bottom = 1096.8723
+scale = Vector2(0.7220264, 0.7540148)
+texture_normal = ExtResource("8_oieil")
