@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bqwvfnyo72vya"]
+
+[ext_resource type="Texture2D" uid="uid://cmdmo4wr4vf4e" path="res://image/烏雲.png" id="1_ox5wc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ox5wc"]
+
+[node name="DarkCloud" type="StaticBody2D" unique_id=57177474 groups=["dark_cloud"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=562266989]
+position = Vector2(615, 296)
+scale = Vector2(0.78409106, 0.6199523)
+texture = ExtResource("1_ox5wc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=124812457]
+position = Vector2(645, 301)
+scale = Vector2(4.9725947, 2.1538231)
+shape = SubResource("RectangleShape2D_ox5wc")

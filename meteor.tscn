@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bccb385v0p5e5"]
+
+[ext_resource type="Script" uid="uid://br8258f4qu31" path="res://meteor.gd" id="1_ohe0j"]
+[ext_resource type="Texture2D" uid="uid://ddjpqybdqbgq6" path="res://image/隕石-removebg-preview.png" id="2_xunib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohe0j"]
+
+[node name="Meteor" type="RigidBody2D" unique_id=1120259839 groups=["meteor"]]
+script = ExtResource("1_ohe0j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=857970713]
+position = Vector2(566, 274)
+texture = ExtResource("2_xunib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=27850740]
+position = Vector2(535, 306)
+scale = Vector2(2.118418, 1.8450677)
+shape = SubResource("RectangleShape2D_ohe0j")
