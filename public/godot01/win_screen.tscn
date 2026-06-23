@@ -29,3 +29,8 @@ offset_right = 1199.0
 offset_bottom = 888.00006
 scale = Vector2(0.43797848, 0.43927595)
 texture_normal = ExtResource("4_luvg0")
+
+[node name="RankLabel" type="Label" parent="." unique_id=8241520]
+offset_right = 196.0
+offset_bottom = 179.0
+scale = Vector2(1.486555, 1.4590086)

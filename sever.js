@@ -27,7 +27,7 @@ server.get("/score", function (req, res) { //other pages
 });
 
 
-server.post("/rank", (req, res) => {
+server.get("/rank", (req, res) => {
    GameDB.find({}, { _id: 0 }).sort({ "score": -1 }).limit(3).then((docs) => {
       if (docs != null) {
          res.send(docs);
@@ -49,4 +49,4 @@ server.post("/postscore", (req, res) => {
    // res.send([{name:"MD", rank:1},{name:"Jhon",rank:2}]);
 });
 
-server.listen(80);
+server.listen(3000);

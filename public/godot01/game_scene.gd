@@ -13,8 +13,26 @@ var button_cooldown = 0.0
 var score = 0
 var meteor_timer = 0.0
 var meteor_interval = 5.0
+var http_request
 
+
+func upload_score():
+	
+	var url = "http://localhost:3000/postscore"
+	var headers = ["Content-Type: application/json"]
+	var body = JSON.stringify({"score": score, "user": "player1"})
+	http_request.request_completed.connect(_on_request_completed)
+	http_request.request(url, headers, HTTPClient.METHOD_POST, body)
+
+func _on_request_completed(result, response_code, headers, body):
+	print("回應碼: ", response_code)
+	print("回應內容: ", body.get_string_from_utf8())
+	get_tree().change_scene_to_file("res://win_screen.tscn")
+	
+	
 func _ready():
+	http_request = HTTPRequest.new()
+	add_child(http_request)
 	player_node = get_node("Player")
 	# 從玩家位置稍微上方開始生成雲
 	last_cloud_y = player_node.position.y - 50
@@ -28,8 +46,9 @@ func _ready():
 
 func update_score():
 	$HUD/ScoreLabel.text = "score: " + str(score)
-	if score >= 300:
-		get_tree().change_scene_to_file("res://win_screen.tscn")
+	if score >= 10:
+		upload_score()
+		
 
 func add_score(points):
 	score += points
